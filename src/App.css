@@ -10,10 +10,12 @@
 }
 
 .chat-container {
-	margin-left: 25%;
+	text-align: center;
+	margin: auto;
 	padding: 0;
 	background-color: #fff;
 	width: 50%;
+	min-width: 400px;
 	border: 1px solid #000;
 }
 
