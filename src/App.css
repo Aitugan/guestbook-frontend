@@ -1,38 +1,109 @@
 .App {
-  text-align: center;
+	text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.message {
+	max-width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chat-container {
+	margin-left: 25%;
+	padding: 0;
+	background-color: #fff;
+	width: 50%;
+	border: 1px solid #000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.input-area {
+	height: 195px;
+	padding: 20px 30px 10px 20px;
+	background-color: #e3ecff;
 }
 
-.App-link {
-  color: #61dafb;
+.input-area input {
+	resize: none;
+	border: none;
+	display: block;
+	width: 50%;
+	height: 10px;
+	border-radius: 3px;
+	padding: 20px;
+	font-size: 13px;
+	margin-left: 25%;
+	margin-bottom: 5px;
+	background-color: #758aff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-area input::placeholder {
+	color: #fff;
+}
+
+.input-area textarea {
+	resize: none;
+	border: none;
+	display: block;
+	width: 50%;
+	height: 40px;
+	border-radius: 3px;
+	padding: 20px;
+	font-size: 13px;
+	margin-left: 25%;
+	background-color: #758aff;
+}
+
+.input-area textarea::placeholder {
+	color: #fff;
+}
+
+.input-area button {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #fff;
+	background-color: #91caff;
+	padding: 1%;
+	vertical-align: top;
+	margin-top: 5px;
+	display: inline-block;
+}
+
+#chat {
+	padding-left: 0;
+	margin: 0;
+	list-style-type: none;
+	overflow-y: scroll;
+	height: 535px;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+}
+
+#chat li {
+	padding: 10px 30px;
+}
+
+#chat h2 {
+	display: inline-block;
+	font-size: 13px;
+	font-weight: normal;
+}
+
+#chat .name {
+	margin-bottom: 5px;
+}
+
+#chat .message {
+	padding: 20px;
+	color: #fff;
+	line-height: 25px;
+	max-width: 90%;
+	display: inline-block;
+	text-align: left;
+	border-radius: 5px;
+}
+
+#chat .message {
+	background-color: #6fbced;
 }
