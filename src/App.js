@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import socketIOClient from "socket.io-client";
 import "./App.css";
-
+import {formatDate} from "./helpers/date_converter"
 const socket = socketIOClient(process.env.REACT_APP_BACKEND_URL);
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    if (!newMessage) {
+    if (!newMessage || !name) {
       return;
     }
     const response = await axios.post(
@@ -66,7 +66,9 @@ function App() {
             .map((message) => (
               <li key={message._id}>
                 <div className="name">
-                  <h2>{message.name}</h2>
+                  <h2>Written by</h2>
+                  <h2><b>{message.name}</b></h2>
+                  <h3>at <b>{formatDate(message.createdAt)}</b></h3>
                 </div>
                 <div className="message">{message.text}</div>
               </li>

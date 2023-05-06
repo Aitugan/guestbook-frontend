@@ -84,14 +84,16 @@
 	padding: 10px 30px;
 }
 
-#chat h2 {
+#chat h2, #chat h3 {
 	display: inline-block;
 	font-size: 13px;
 	font-weight: normal;
+	margin-right: 5px;
 }
 
 #chat .name {
 	margin-bottom: 5px;
+	overflow: hidden;
 }
 
 #chat .message {
@@ -102,6 +104,7 @@
 	display: inline-block;
 	text-align: left;
 	border-radius: 5px;
+	word-wrap:break-word;
 }
 
 #chat .message {
